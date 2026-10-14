@@ -14,8 +14,8 @@ import org.springframework.web.client.RestTemplate;
 @RequiredArgsConstructor
 public class RestTemplateClient {
 
-    private static final String PROVIDER_URL = "http://localhost:9091";
-
+    // private static final String PROVIDER_URL = "http://localhost:9091";
+    private static final String PROVIDER_URL = "http://provider-service";
 
     private final RestTemplate restTemplate;
 

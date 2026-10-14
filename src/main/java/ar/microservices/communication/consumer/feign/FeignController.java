@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class FeignController {
 
-    //private final ProviderFeignClient providerFeignClient;
+    private final ProviderFeignClient providerFeignClient;
 
     @GetMapping("/instance")
     public String getInstance() {
 
-        //return providerFeignClient.getInstanceInfo();
-        return "";
+        return providerFeignClient.getInstanceInfo();
+
     }
 
 

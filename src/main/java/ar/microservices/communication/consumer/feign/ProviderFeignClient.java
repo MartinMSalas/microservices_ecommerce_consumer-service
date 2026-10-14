@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
  * Project Name: communication
  * Description: beExcellent
  */
-@FeignClient(name="provider-service", url="http://localhost:9091")
+//@FeignClient(name="provider-service", url="http://localhost:9091")
+@FeignClient(name="provider-service")
 public interface ProviderFeignClient {
 
     @GetMapping("/instance-info")
