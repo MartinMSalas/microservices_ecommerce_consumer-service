@@ -14,12 +14,19 @@ import org.springframework.web.client.RestClient;
  */
 
 @Service
-@RequiredArgsConstructor
 public class ProviderRestClient {
 
     private final RestClient restClient;
 
+//    public ProviderRestClient(
+//            @Qualifier("providerRestClientBean") RestClient restClient) {
+//        this.restClient = restClient;
+//    }
 
+    public ProviderRestClient(
+            RestClient restClient) {
+        this.restClient = restClient;
+    }
     public String getInstanceInfo() {
         return restClient.get()
                 .uri("/instance-info")
